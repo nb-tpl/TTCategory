@@ -12,7 +12,6 @@
 
 
 //fundation
-#import "NSObject+TT_findGlobal.h"
 
 
 #endif /* TTCategory_h */
