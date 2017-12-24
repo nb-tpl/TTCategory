@@ -123,7 +123,7 @@
 		3B6379DE1FE754FF00C59C7F /* TTCategory */ = {
 			isa = PBXGroup;
 			children = (
-				3B637A111FE7592600C59C7F /* TTCategory */,
+				3B637A111FE7592600C59C7F /* TT_Category */,
 				3B6379DF1FE754FF00C59C7F /* AppDelegate.h */,
 				3B6379E01FE754FF00C59C7F /* AppDelegate.m */,
 				3B6379E21FE754FF00C59C7F /* ViewController.h */,
@@ -155,14 +155,14 @@
 			path = TTCategoryUITests;
 			sourceTree = "<group>";
 		};
-		3B637A111FE7592600C59C7F /* TTCategory */ = {
+		3B637A111FE7592600C59C7F /* TT_Category */ = {
 			isa = PBXGroup;
 			children = (
 				3B637A121FE7592600C59C7F /* UI */,
 				3B637A151FE7592600C59C7F /* Function */,
 				3BEC77C01FEB57F3007C2C62 /* TTCategory.h */,
 			);
-			path = TTCategory;
+			path = TT_Category;
 			sourceTree = "<group>";
 		};
 		3B637A121FE7592600C59C7F /* UI */ = {

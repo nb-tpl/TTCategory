@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "TTCategory"
-  s.version      = "0.0.1"
+  s.name         = "TT_Category"
+  s.version      = "0.0.2"
   s.summary      = "框架分类扩展"
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TTCategory/TTCategory/**/*.{h,m}"
+  s.source_files  = "TTCategory/TT_Category/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
