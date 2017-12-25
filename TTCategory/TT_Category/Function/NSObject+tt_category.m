@@ -57,4 +57,42 @@
         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 
+
+
+#pragma mark
+#pragma mark -----fitValue 适配
+#define fitiPhone472iPhone55 (414.0f/375.0f)
+#define fitiPhone42iPhone47  (375.0f/320.f)
+#define tempValue (414.0f/1080.0f)
+
++(CGFloat)pointToFit6PPXValue:(CGFloat)pxValue
+{
+    
+    //4寸
+    CGFloat realPoint = pxValue * tempValue;
+    if (ScreenWidth < 375) {
+        return ((realPoint/fitiPhone472iPhone55)/fitiPhone42iPhone47);
+    }else if(ScreenWidth < 414)//4.7
+    {
+        return realPoint/fitiPhone472iPhone55;
+    }else {//5.5
+        return realPoint;
+    }
+}
+
+
+//iP6为基准  pt位置转换成其它尺寸pt
++ (CGFloat)pointToFit6PTValue:(CGFloat)ptValue
+{
+    //4寸
+    if (ScreenWidth < 375) {
+        return (ptValue/375.0)*320.0;
+    }else if(ScreenWidth < 414)//4.7
+    {
+        return ptValue;
+    }else {//5.5
+        return (ptValue/375.0)*414.0;
+    }
+}
+
 @end

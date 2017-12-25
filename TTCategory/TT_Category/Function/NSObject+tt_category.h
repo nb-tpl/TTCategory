@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
+
+
+//实际屏幕宽和高
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
 @interface NSObject (tt_category)
 
 
@@ -36,6 +44,16 @@
  */
 +(void)endIgnoringInteractionEvents;
 
+#pragma mark
+#pragma mark -----fitValue 适配
+//6P图像素位置转换  基图为1080P
+#define point_To_6P_Px(value) ([NSObject pointToFit6PPXValue:value])
+
+//1080P图像素位置
++ (CGFloat)pointToFit6PPXValue:(CGFloat)pxValue;
+
+//iP6为基准  pt位置转换成其它尺寸pt
++ (CGFloat)pointToFit6PTValue:(CGFloat)ptValue;
 
 
 

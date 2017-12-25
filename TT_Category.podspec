@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TT_Category"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "框架分类扩展"
 
   # This description is used to generate tags and improve search results.
@@ -90,12 +90,9 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
+s.public_header_files = "TTCategory/TT_Category/**/*.h"
   s.source_files  = "TTCategory/TT_Category/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
-
-  # s.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
