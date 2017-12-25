@@ -22,6 +22,8 @@
 		3BEC77C91FEBB7E5007C2C62 /* UIView+tt_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC77C81FEBB7E5007C2C62 /* UIView+tt_category.m */; };
 		3BEC77CC1FEBF9DA007C2C62 /* UIDevice+tt_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC77CB1FEBF9DA007C2C62 /* UIDevice+tt_category.m */; };
 		3BEC77CF1FEBFAE8007C2C62 /* UIColor+tt_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC77CE1FEBFAE8007C2C62 /* UIColor+tt_category.m */; };
+		3BF26D191FF1359D00FF92DE /* motortrip_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF26D171FF1359C00FF92DE /* motortrip_circle@2x.png */; };
+		3BF26D1A1FF1359D00FF92DE /* common_bg_changjing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF26D181FF1359D00FF92DE /* common_bg_changjing@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		3BEC77CB1FEBF9DA007C2C62 /* UIDevice+tt_category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+tt_category.m"; sourceTree = "<group>"; };
 		3BEC77CD1FEBFAE8007C2C62 /* UIColor+tt_category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+tt_category.h"; sourceTree = "<group>"; };
 		3BEC77CE1FEBFAE8007C2C62 /* UIColor+tt_category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+tt_category.m"; sourceTree = "<group>"; };
+		3BF26D171FF1359C00FF92DE /* motortrip_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "motortrip_circle@2x.png"; sourceTree = "<group>"; };
+		3BF26D181FF1359D00FF92DE /* common_bg_changjing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg_changjing@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 		3B6379DE1FE754FF00C59C7F /* TTCategory */ = {
 			isa = PBXGroup;
 			children = (
+				3BF26D181FF1359D00FF92DE /* common_bg_changjing@2x.png */,
+				3BF26D171FF1359C00FF92DE /* motortrip_circle@2x.png */,
 				3B637A111FE7592600C59C7F /* TT_Category */,
 				3B6379DF1FE754FF00C59C7F /* AppDelegate.h */,
 				3B6379E01FE754FF00C59C7F /* AppDelegate.m */,
@@ -299,8 +305,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF26D1A1FF1359D00FF92DE /* common_bg_changjing@2x.png in Resources */,
 				3B6379EC1FE754FF00C59C7F /* LaunchScreen.storyboard in Resources */,
 				3B6379E91FE754FF00C59C7F /* Assets.xcassets in Resources */,
+				3BF26D191FF1359D00FF92DE /* motortrip_circle@2x.png in Resources */,
 				3B6379E71FE754FF00C59C7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FN87A34J65;
 				INFOPLIST_FILE = TTCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpl.TTCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FN87A34J65;
 				INFOPLIST_FILE = TTCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpl.TTCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,6 +10,9 @@
 
 #import "UIButton+tt_category.h"
 #import "UIAlertController+tt_category.h"
+#import "NSObject+tt_category.h"
+#import "UIColor+tt_category.h"
+#import "UIView+tt_category.h"
 
 @interface ViewController ()
 
@@ -20,13 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor tt_getHexColor:@"14172B"];
     [UIButton tt_testButtonWithType:UIButtonTypeCustom inView:self.view touchUpInsideActionBlock:^(id sender) {
         [self alert];
     }];
     
+    [self loadHeadView];
+}
+
+- (void)loadHeadView
+{
+    UIImageView * imageBackView = [[UIImageView alloc] initWithFrame:CGRectMake(0,point2IP6_PT(64),ScreenWidth,point2IP6_PT(246))];
+    imageBackView.image = [UIImage imageNamed:@"common_bg_changjing.png"];
+    [self.view addSubview:imageBackView];
     
-    
+    UIImageView * circle = [[UIImageView alloc] initWithFrame:CGRectMake(0,point2IP6_PT(64),point2IP6_PT(190),point2IP6_PT(167))];
+    circle.center = CGPointMake(imageBackView.tt_sizeCenterX,imageBackView.tt_height - point2IP6_PT(42) - circle.tt_height/2.0f);
+    circle.image = [UIImage imageNamed:@"motortrip_circle.png"];
+    [imageBackView addSubview:circle];
+
 }
 
 -(void)alert

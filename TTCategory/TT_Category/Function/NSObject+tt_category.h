@@ -47,13 +47,16 @@
 #pragma mark
 #pragma mark -----fitValue 适配
 //6P图像素位置转换  基图为1080P
-#define point_To_6P_Px(value) ([NSObject pointToFit6PPXValue:value])
+#define point2IP6P_PX(value) ([NSObject pointToFit6PPXValue:value])
+
+#define point2IP6_PT(value) ([NSObject pointToFitIP6PTValue:value])
+
 
 //1080P图像素位置
-+ (CGFloat)pointToFit6PPXValue:(CGFloat)pxValue;
++ (CGFloat)pointToFitIP6PPXValue:(CGFloat)pxValue;
 
 //iP6为基准  pt位置转换成其它尺寸pt
-+ (CGFloat)pointToFit6PTValue:(CGFloat)ptValue;
++ (CGFloat)pointToFitIP6PTValue:(CGFloat)ptValue;
 
 
 

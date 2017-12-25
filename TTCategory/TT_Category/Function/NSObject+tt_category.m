@@ -65,7 +65,7 @@
 #define fitiPhone42iPhone47  (375.0f/320.f)
 #define tempValue (414.0f/1080.0f)
 
-+(CGFloat)pointToFit6PPXValue:(CGFloat)pxValue
++(CGFloat)pointToFitIP6PPXValue:(CGFloat)pxValue
 {
     
     //4寸
@@ -82,7 +82,7 @@
 
 
 //iP6为基准  pt位置转换成其它尺寸pt
-+ (CGFloat)pointToFit6PTValue:(CGFloat)ptValue
++ (CGFloat)pointToFitIP6PTValue:(CGFloat)ptValue
 {
     //4寸
     if (ScreenWidth < 375) {
