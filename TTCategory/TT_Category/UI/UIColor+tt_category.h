@@ -29,6 +29,19 @@
  @return 16进制对应生成的UIColor对象
  */
 + (UIColor *)tt_getHexColor:(NSString *)hexColor;
+
+/**
+ 根据rgb对应的256色色值获取颜色，主要用户Mac用户拾色器获得的rgb值来获取对应UIColor实例
+数值不对返回nil
+ 
+ @param red 红色255色值
+ @param green 绿色255色值
+ @param blue 蓝色255色值
+ @param alpha alpha255值
+ @return 对应UIColor实例
+ */
++ (UIColor *)tt_getColorFrom255NumberRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+ 
 #pragma mark
 #pragma mark -----deal 处理
 //混合颜色,ratio 0~1

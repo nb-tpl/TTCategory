@@ -60,6 +60,15 @@
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
 }
 
++ (UIColor *)tt_getColorFrom255NumberRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
+{
+    UIColor * color = nil;
+    if(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255 && alpha >= 0 && alpha <= 255) {
+        color = [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha/255.0f];
+    }
+    return color;
+}
+
 #pragma mark -----deal 处理
 //混合颜色,ratio 0~1
 +(UIColor *)tt_mixColor1:(UIColor*)color1 color2:(UIColor *)color2 ratio:(CGFloat)ratio
