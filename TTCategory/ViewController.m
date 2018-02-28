@@ -46,12 +46,17 @@
 
 -(void)alert
 {
-    UIAlertController * alert = [UIAlertController tt_alertControllerWithTitle:@"" titleColor:nil message:@"提示内容" cancleTitle:@"取消" cancleTitleColor:[UIColor blueColor] canclehandler:^(UIAlertAction *action) {
+   void (^callPhone)(UIAlertAction *action)  =  ^(UIAlertAction *action) {
         self.view.backgroundColor = [UIColor redColor];
-    } commitTitle:@"确定" commitTitleColor:[UIColor greenColor] commithandler:^(UIAlertAction *action) {
-        self.view.backgroundColor = [UIColor greenColor];
-    }];
+   };
+    void (^callWebChat)(UIAlertAction *action)  =  ^(UIAlertAction *action) {
+        self.view.backgroundColor = [UIColor redColor];
+    };
+
     
+    UIAlertController * alert = [UIAlertController tt_actionSheetControllerWithTitles:nil titleColor:nil message:nil subTitles:@[@"打电话",@"微信"] subTitleColor:@[[UIColor blackColor],[UIColor blackColor]] subhandlers:@[callPhone,callWebChat] cancleTitle:@"取消" cancleTitleColor:[UIColor blueColor] canclehandler:^(UIAlertAction *action) {
+        self.view.backgroundColor = [UIColor redColor];
+    }];
     [alert show:YES];
 }
 

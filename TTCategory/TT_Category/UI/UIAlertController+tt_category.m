@@ -42,6 +42,43 @@
     return alertController;
 }
 
++ (UIAlertController *)tt_actionSheetControllerWithTitles:(NSString *)title titleColor:(UIColor *)titleColor message:(NSString *)message subTitles:(NSArray<NSString *> *)subTitles subTitleColor:(NSArray<UIColor *> *)subTitleColors subhandlers:(NSArray<void (^)(UIAlertAction *action)> *)subHandlers cancleTitle:(NSString *)cancleTitle cancleTitleColor:(UIColor *)cancleTitleColor canclehandler:(void (^)(UIAlertAction *action))cancleHandler
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    //修改标题的内容，字号，颜色。使用的key值是“attributedTitle”
+    if(title){
+        NSMutableAttributedString * attributeTitle = [[NSMutableAttributedString alloc] initWithString:title];
+        [attributeTitle addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0, [[attributeTitle string] length])];
+        [alertController setValue:attributeTitle forKey:@"attributedTitle"];
+    }
+    
+    for(int i =0;i<subTitles.count;i++){
+        UIAlertAction *subAction = [UIAlertAction actionWithTitle:subTitles[i] style:UIAlertActionStyleDefault handler:subHandlers[i]];
+        [subAction setValue:subTitleColors[i] forKey:@"_titleTextColor"];
+        [alertController addAction:subAction];
+    }
+    
+    //修改按钮的颜色，同上可以使用同样的方法修改内容，样式
+    if(cancleTitle && ![cancleTitle isEqualToString:@""]){
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancleTitle style:UIAlertActionStyleCancel handler:cancleHandler];
+        if(cancleTitleColor) {
+            [cancelAction setValue:cancleTitleColor forKey:@"_titleTextColor"];
+        }
+        [alertController addAction:cancelAction];
+    }
+    
+//    if(commitTitle && ![commitTitle isEqualToString:@""]) {
+//        UIAlertAction *commitAction = [UIAlertAction actionWithTitle:commitTitle style:UIAlertActionStyleDefault handler:commitHandler];
+//        if(commitTitleColor) {
+//            [commitAction setValue:commitTitleColor forKey:@"_titleTextColor"];
+//        }
+//        [alertController addAction:commitAction];
+//    }
+    
+    return alertController;
+}
+
 - (void)show:(BOOL)animate
 {
     [[NSObject tt_frontVC] presentViewController:self animated:animate completion:nil];
